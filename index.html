@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Cyberspace: Phishing Quiz</title>
+    <title>Cyber Guardian: Safety Challenge</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="quiz-container">
         <header>
-            <h1>Phishing Detector</h1>
-            <p>Can you spot the fake emails? Test your skills.</p>
+            <div class="icon">🛡️</div>
+            <h1>Cyber Guardian</h1>
+            <p>Master Phishing, Passwords, and Network Safety.</p>
         </header>
 
         <div id="quiz-box">
-            <div class="progress-bar">
-                <div id="progress" class="progress"></div>
+            <div class="stats-bar">
+                <span id="question-number">Question 1</span>
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
             </div>
             
-            <h3 id="question-number">Question 1 of 5</h3>
-            
-            <div class="email-preview" id="email-display">
+            <div class="scenario-card" id="email-display">
                 </div>
 
             <div class="controls">
-                <button class="btn safe-btn" onclick="checkAnswer('Real')">✅ It's Real</button>
-                <button class="btn scam-btn" onclick="checkAnswer('Fake')">❌ It's a Scam</button>
+                <button class="btn safe-btn" onclick="checkAnswer('Real')">✅ It's Safe / Real</button>
+                <button class="btn scam-btn" onclick="checkAnswer('Fake')">⚠️ It's Unsafe / Fake</button>
             </div>
 
             <div id="feedback" class="feedback hidden">
@@ -37,10 +39,14 @@
         </div>
 
         <div id="result-box" class="hidden">
-            <h2>Quiz Complete!</h2>
-            <p>Your Score: <span id="final-score">0</span> / 5</p>
-            <p id="final-message">Great job keeping the internet secure!</p>
-            <button class="btn" onclick="location.reload()">Restart Quiz</button>
+            <div class="score-circle">
+                <span id="final-score">0</span>
+                <span class="divider">/</span>
+                <span id="total-questions">10</span>
+            </div>
+            <h2>Mission Complete!</h2>
+            <p id="final-message">Analyzing your performance...</p>
+            <button class="btn restart-btn" onclick="location.reload()">Replay Mission</button>
         </div>
     </div>
 
