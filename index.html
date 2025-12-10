@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Cyberspace: Phishing Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <header>
+            <h1>Phishing Detector</h1>
+            <p>Can you spot the fake emails? Test your skills.</p>
+        </header>
+
+        <div id="quiz-box">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            
+            <h3 id="question-number">Question 1 of 5</h3>
+            
+            <div class="email-preview" id="email-display">
+                </div>
+
+            <div class="controls">
+                <button class="btn safe-btn" onclick="checkAnswer('Real')">✅ It's Real</button>
+                <button class="btn scam-btn" onclick="checkAnswer('Fake')">❌ It's a Scam</button>
+            </div>
+
+            <div id="feedback" class="feedback hidden">
+                <h2 id="feedback-title">Correct!</h2>
+                <p id="feedback-text">Explanation goes here.</p>
+                <button class="btn next-btn" onclick="nextQuestion()">Next Question ➡</button>
+            </div>
+        </div>
+
+        <div id="result-box" class="hidden">
+            <h2>Quiz Complete!</h2>
+            <p>Your Score: <span id="final-score">0</span> / 5</p>
+            <p id="final-message">Great job keeping the internet secure!</p>
+            <button class="btn" onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
